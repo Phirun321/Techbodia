@@ -7,7 +7,8 @@ First, run the development server:
 ```bash
 #cd frontend/testing
 #run: npm install [install packages]
-npm run dev
+'''run project
+# npm run dev
 NOTE: make sure your api is running
 ```
 
