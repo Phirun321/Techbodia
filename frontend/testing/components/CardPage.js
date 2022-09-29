@@ -15,7 +15,7 @@ export default function CardPage({flag,name,nativeName, cca2, cca3, altSpelling,
     return <>
     <CardDetail data={data}/>
     {console.log('data get::::', data)}
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 345 }}>
         <CardMedia
             component="img"
             height="140"

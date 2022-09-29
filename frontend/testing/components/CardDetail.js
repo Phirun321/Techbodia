@@ -72,7 +72,7 @@ export default function CardDetail({data}) {
         <DialogContent dividers sx={{width:500}}>
             <Stack><img src={data.flags['png']} sx={{width:200}}></img></Stack>
           <Stack direction={'row'}>
-            <Typography>{data.name.nativeName['eng']['official']}</Typography>
+            <Typography>{data.name.nativeName['official']}</Typography>
           </Stack>
           <Stack direction={'row'} spacing={5}>
             <Typography>{data.tld[0]}</Typography>
@@ -91,8 +91,8 @@ export default function CardDetail({data}) {
           </Stack>
           <Typography>This country hase population {data.population}</Typography>
           <Stack direction={'row'} spacing={5}>
-          <Typography  sx={{color:'blue'}}><Link href={data.maps['googleMaps']}>view on map</Link></Typography>
-          <Typography  sx={{color:'red'}}><Link href={data.coatOfArms['png']}>view coat of arms</Link></Typography>
+          <Typography  sx={{color:'blue'}}><Link href={data.maps['googleMaps'] || 'example.png'}>view on map</Link></Typography>
+          <Typography  sx={{color:'red'}}><Link href={data.coatOfArms['png'] || 'example.png'}>view coat of arms</Link></Typography>
           </Stack>
 
         </DialogContent>
