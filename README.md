@@ -1,5 +1,6 @@
-##git clone git@github.com:Phirun321/techCambo.git
-##git checkout master
+## git clone git@github.com:Phirun321/techCambo.git
+
+## git checkout master
 
 1. backend
 ```base
