@@ -3,6 +3,7 @@ import React from 'react'
 import { Button, Grid, Stack } from "@mui/material"
 import OpenState from "../state/open"
 import { useRecoilState } from 'recoil'
+import CardDetail from "../components/CardDetail"
 export default function Home() {
   const [item, setItem] = React.useState()
   const [popUp, setPopUp] = useRecoilState(OpenState)
@@ -55,7 +56,7 @@ export default function Home() {
         {item?.items.map((el, index) => {
           return <Grid item lg={3} sm={6} md={4} xs={12} 
           display="flex" justifyContent="center" 
-          alignItems="center" minWidth={'100'}>
+          alignItems="center" minWidth={'100'} key={index}>
             <CardPage
               flag={el.flags['png']}
               name={el.name.official}
@@ -64,7 +65,6 @@ export default function Home() {
               cca3={el.cca3}
               altSpelling={el.altSpellings[0]}
               idd={el.idd.root}
-              data={dataGet}
               onClick={() => handleClick(el)}
             />
           </Grid>
@@ -76,7 +76,7 @@ export default function Home() {
           </Stack>
         </Grid>
       </Grid>
-      
+      <CardDetail data={dataGet}/>
     </div>
   )
 }

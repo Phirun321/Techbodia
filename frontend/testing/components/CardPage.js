@@ -9,12 +9,10 @@ import React from 'react'
 import CardDetail from './CardDetail';
 import OpenState from '../state/open';
 import {useRecoilState} from 'recoil'
-export default function CardPage({flag,name,nativeName, cca2, cca3, altSpelling,idd,data, onClick}) {
+export default function CardPage({flag,name,nativeName, cca2, cca3, altSpelling,idd, onClick}) {
     const [popUp, setPopUp] = useRecoilState(OpenState)
     const [dataGet, setDataGet] = React.useState([])
     return <>
-    <CardDetail data={data}/>
-    {console.log('data get::::', data)}
     <Card sx={{ width: 345 }}>
         <CardMedia
             component="img"
@@ -23,7 +21,7 @@ export default function CardPage({flag,name,nativeName, cca2, cca3, altSpelling,
             alt="Micronesia"
         />
         <CardContent>
-            <Typography variant='h6'>{name}</Typography>
+            <Typography variant='h6' onClick={onClick} sx={{cursor:'pointer','&:hover':{color:'blue'}}}>{name}</Typography>
             <Typography variant='span' sx={{ color: 'gray' }}>{nativeName}</Typography>
             <Stack direction={'row'} spacing={2.5}>
                 <Typography>{cca2}</Typography>
