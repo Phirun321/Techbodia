@@ -3,7 +3,7 @@
 1. backend
 ```base
 ##cd backend
-##create and active your environment
+##active environment: source env/bin/activate [ubuntu]
 ##run command : pip install -r requirement.text
 
 ```start server
